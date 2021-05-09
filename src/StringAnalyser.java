@@ -11,9 +11,10 @@ public class StringAnalyser {
         System.out.println("Ниже пример строки и вывода этой же строки с подсветкой:");
         System.out.println("aaasdfdvctttttttttyyyppppppppp89er999999999---+6543");
         System.out.println("aaasdfdvc" + ANSI_PURPLE + "ttttttttt" + ANSI_RESET + "yyy" + ANSI_PURPLE + "ppppppppp" + ANSI_RESET + "89er" + ANSI_PURPLE + "999999999" + ANSI_RESET + "---+6543");
-        System.out.println("Введите произвольную строку для анализа:");
 
         Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Введите произвольную строку для анализа:");
         String string = scanner.nextLine();
 
         char currentChar = string.charAt(0);
