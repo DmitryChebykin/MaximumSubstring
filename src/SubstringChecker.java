@@ -32,7 +32,8 @@ public class SubstringChecker {
 
         for (int endIndex : maxSubstringsEndIndexes) {
             String nonColoredSubString = checkedString.substring(beginIndex, endIndex - maxSubstringLength + 1);
-            String coloredSubString = ANSI_PURPLE + getReplacedWhiteSpacesString(checkedString.substring(endIndex - maxSubstringLength + 1, endIndex + 1)) + ANSI_RESET;
+            String coloredSubString = ANSI_PURPLE + getReplacedWhiteSpacesString(checkedString.substring(endIndex - maxSubstringLength + 1,
+                    endIndex + 1)) + ANSI_RESET;
 
             beginIndex = endIndex + 1;
 
@@ -48,6 +49,7 @@ public class SubstringChecker {
 
     public int getMaxSubstringLength() {
         if (checkedString.length() == 0) {
+
             return 0;
         }
 
@@ -90,10 +92,8 @@ public class SubstringChecker {
         int maxSubstringLength = getMaxSubstringLength();
 
         for (int i = 0; i < getMaxSubstringsCount(); i++) {
-            maxSubstrings[i] = getReplacedWhiteSpacesString(checkedString.substring((maxSubstringsEndIndexes[i] + 1 - maxSubstringLength),
-                    maxSubstringsEndIndexes[i] + 1));
+            maxSubstrings[i] = getReplacedWhiteSpacesString(checkedString.substring((maxSubstringsEndIndexes[i] + 1 - maxSubstringLength), maxSubstringsEndIndexes[i] + 1));
         }
-
         return maxSubstrings;
     }
 
@@ -103,6 +103,7 @@ public class SubstringChecker {
         }
 
         char currentChar = checkedString.charAt(0);
+
         int maxSubstringLength = 1;
         int currentSubstringLength = 1;
         int maxSubstringsCount = 0;
